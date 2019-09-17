@@ -88,6 +88,7 @@ export default class FlagDropDown extends Component {
         inputOuterHeight={inputOuterHeight}
         preferredCountries={preferredCountries}
         highlightedCountry={highlightedCountry}
+        countryCode={this.props.countryCode}
         changeHighlightCountry={changeHighlightCountry}
       />
     );
@@ -109,6 +110,8 @@ export default class FlagDropDown extends Component {
         <div
           className="selected-flag"
           tabIndex={allowDropdown ? '0' : ''}
+          aria-haspopup="listbox"
+          aria-expanded={this.props.showDropdown}
           onClick={clickSelectedFlag}
           onKeyDown={handleSelectedFlagKeydown}
           title={titleTip}

@@ -609,6 +609,8 @@ class IntlTelInput extends Component {
 
       const selectedIndex = utils.retrieveLiIndex(next);
 
+      next.focus();
+
       this.setState({
         showDropdown: true,
         highlightedCountry: selectedIndex,

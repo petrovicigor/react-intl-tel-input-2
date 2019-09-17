@@ -18,6 +18,7 @@ export default class CountryList extends Component {
     changeHighlightCountry: PropTypes.func,
     showDropdown: PropTypes.bool,
     isMobile: PropTypes.bool,
+    countryCode: PropTypes.string,
   };
 
   shouldComponentUpdate(nextProps) {
@@ -84,8 +85,12 @@ export default class CountryList extends Component {
       return (
         <li
           key={`${keyPrefix}${country.iso2}`}
-          id={`item-${country.iso2}`}
+          id={`flag-${country.iso2}`}
           className={countryClass}
+          role="option"
+          tabIndex={-1}
+          aria-selected={`flag-${this.props.countryCode}` === `flag-${country.iso2}`}
+          data-dial-code={country.dialCode}
           data-country-code={country.iso2}
           onMouseOver={this.props.isMobile ? null : this.handleMouseOver}
           onClick={partial(this.setFlag, country.iso2)}
@@ -146,6 +151,9 @@ export default class CountryList extends Component {
           this.listElement = listElement;
         }}
         className={className}
+        tabIndex="0"
+        role="listbox"
+        aria-activedescendant={`flag-${this.props.countryCode}`}
       >
         {preferredOptions}
         {divider}
