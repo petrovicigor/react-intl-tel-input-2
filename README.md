@@ -1,3 +1,5 @@
+# This is fork of patw0929/react-intl-tel-input made accessible country list navigation with screen reader and keyboard 
+
 # React-Intl-Tel-Input
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)

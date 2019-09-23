@@ -1,5 +1,5 @@
 {
-  "name": "react-intl-tel-input",
+  "name": "react-intl-tel-input-2",
   "version": "7.0.1",
   "description": "Telephone input component. Rewrite intl-tel-input in React.js.",
   "author": "patw",
@@ -9,15 +9,16 @@
     "tel",
     "telephone",
     "intl-tel-input",
+    "intl-tel-input-2",
     "international-telephone-input",
     "phonenumber"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/patw0929/react-intl-tel-input"
+    "url": "https://github.com/petrovicigor/react-intl-tel-input-2"
   },
   "bugs": {
-    "url": "https://github.com/patw0929/react-intl-tel-input/issues"
+    "url": "https://github.com/petrovicigor/react-intl-tel-input-2/issues"
   },
   "main": "dist/main.js",
   "peerDependencies": {
