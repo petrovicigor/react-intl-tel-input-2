@@ -275,7 +275,7 @@ class IntlTelInput extends Component {
       }
     }
 
-    if (this.tel && this.state.showDropdown) {
+    if (this.tel) {
       this.tel.focus();
     }
 
