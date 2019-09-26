@@ -109,6 +109,7 @@ export default class FlagDropDown extends Component {
       <div ref={refCallback} className="flag-container">
         <div
           className="selected-flag"
+          role="button"
           tabIndex={allowDropdown ? '0' : ''}
           aria-haspopup="listbox"
           aria-expanded={this.props.showDropdown}
