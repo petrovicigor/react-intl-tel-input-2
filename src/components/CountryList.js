@@ -151,7 +151,7 @@ export default class CountryList extends Component {
           this.listElement = listElement;
         }}
         className={className}
-        tabIndex="0"
+        tabIndex="-1"
         role="listbox"
         aria-activedescendant={`flag-${this.props.countryCode}`}
       >

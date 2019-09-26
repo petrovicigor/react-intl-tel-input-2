@@ -148,9 +148,17 @@ class IntlTelInput extends Component {
     return true;
   }
 
-  componentDidUpdate(prevProps) {
+  componentDidUpdate(prevProps, prevState) {
     if (this.props.value !== prevProps.value) {
       this.updateFlagFromNumber(this.props.value);
+    }
+
+    if (this.state.showDropdown !== prevState.showDropdown && this.state.showDropdown === true) {
+      const highlightedListItem = document.querySelector('.country-list > .highlight');
+
+      if (highlightedListItem) {
+        highlightedListItem.focus();
+      }
     }
 
     if (
