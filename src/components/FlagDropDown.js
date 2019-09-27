@@ -107,9 +107,8 @@ export default class FlagDropDown extends Component {
 
     return (
       <div ref={refCallback} className="flag-container">
-        <div
+        <button
           className="selected-flag"
-          role="button"
           tabIndex={allowDropdown ? '0' : ''}
           aria-haspopup="listbox"
           aria-expanded={this.props.showDropdown}
@@ -120,7 +119,7 @@ export default class FlagDropDown extends Component {
           <div className={this.genFlagClassName()} />
           {this.genSelectedDialCode()}
           {this.genArrow()}
-        </div>
+        </button>
         {dropdownContainer && showDropdown ? (
           <RootModal>{this.genCountryList()}</RootModal>
         ) : (
