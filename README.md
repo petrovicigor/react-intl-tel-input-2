@@ -1,30 +1,6 @@
-# This is fork of patw0929/react-intl-tel-input made accessible country list navigation with screen reader and keyboard 
-
-# React-Intl-Tel-Input
-
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-[![Build Status](https://travis-ci.org/patw0929/react-intl-tel-input.svg)](https://travis-ci.org/patw0929/react-intl-tel-input)
-[![npm version](https://badge.fury.io/js/react-intl-tel-input.svg)](http://badge.fury.io/js/react-intl-tel-input)
-[![Coverage Status](https://coveralls.io/repos/github/patw0929/react-intl-tel-input/badge.svg?branch=master)](https://coveralls.io/github/patw0929/react-intl-tel-input?branch=master)
-[![npm](https://img.shields.io/npm/l/express.svg?maxAge=2592000)]()
-
-[![NPM](https://nodei.co/npm/react-intl-tel-input.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/react-intl-tel-input/)
-
-Rewrite [International Telephone Input](https://github.com/jackocnr/intl-tel-input) in React.js.
-
-
-## Collaborators Wanted!
-
-Due to the long commuting time, I have no much time to maintain this project often. 😣
-
-So If anybody else is willing to take on the work of bug fixes, integrating pull requests, etc.
-Please let me know. 🙌
-
-I hope we can maintain the project together, and make this project better! 💪
+# This is a fork of patw0929/react-int-phone-input-accessibility made accessible country list navigation with screen reader and keyboard 
 
 ## Demo & Examples
-
-Live demo: [patw0929.github.io/react-intl-tel-input](https://patw0929.github.io/react-intl-tel-input/)
 
 To build the examples locally, run:
 
@@ -40,42 +16,35 @@ yarn
 yarn start
 ```
 
-Then open [`localhost:3000`](http://localhost:3000) in a browser.
+Then open [`localhost:3000`](http://localhost:4000) in a browser.
 
 
 ## Installation
 
-The easiest way to use react-intl-tel-input is to install it from NPM and include it in your own React build process (using [Webpack](http://webpack.github.io/), etc).
-
-You can also use the standalone build by including `dist/main.js` in your page. If you use this, make sure you have already included React, and it is available as a global variable.
+The easiest way to use react-int-phone-input-accessibility is to install it from NPM and include it in your own React build process (using [Webpack](http://webpack.github.io/), etc).
 
 ```bash
-npm install react-intl-tel-input --save
+npm install react-int-phone-input-accessibility --save
 ```
 
 or
 
 ```bash
-yarn add react-intl-tel-input
+yarn add react-int-phone-input-accessibility
 ```
 
 
 ## Usage
 
 ```javascript
-import IntlTelInput from 'react-intl-tel-input';
-import 'react-intl-tel-input/dist/main.css';
+import IntlTelInput from 'react-int-phone-input-accessibility';
+import 'react-int-phone-input-accessibility/dist/main.css';
 
 <IntlTelInput
   containerClassName="intl-tel-input"
   inputClassName="form-control"
 />
 ```
-
-### Properties
-
-Please see the [Demo Page](https://patw0929.github.io/react-intl-tel-input/)
-
 
 ## Development (`src` and the build process)
 
@@ -97,7 +66,7 @@ yarn run build
 
 ## Contributing
 
-To contribute to react-intl-tel-input, clone this repo locally and commit your code on a separate branch. Please write tests for your code, and run the linter before opening a pull-request:
+To contribute to react-int-phone-input-accessibility, clone this repo locally and commit your code on a separate branch. Please write tests for your code, and run the linter before opening a pull-request:
 
 ```bash
 npm test
@@ -110,11 +79,6 @@ or
 yarn test
 yarn run lint
 ```
-
-## Inspired by
-
-[International Telephone Input](https://github.com/jackocnr/intl-tel-input) - [@jackocnr](https://github.com/jackocnr)
-
 
 ## License
 
