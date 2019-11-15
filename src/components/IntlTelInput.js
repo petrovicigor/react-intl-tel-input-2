@@ -220,7 +220,7 @@ class IntlTelInput extends Component {
 
   // select the given flag, update the placeholder and the active list item
   // Note: called from setInitialState, updateFlagFromNumber, selectListItem, setCountry
-  setFlag = (countryCode, isInit) => {
+  setFlag = (countryCode, isInit, firstComponentLoad = false) => {
     const prevCountry =
       this.selectedCountryData && this.selectedCountryData.iso2
         ? this.selectedCountryData
@@ -283,7 +283,7 @@ class IntlTelInput extends Component {
       }
     }
 
-    if (this.tel) {
+    if (this.tel && !firstComponentLoad) {
       this.tel.focus();
     }
 
@@ -481,6 +481,7 @@ class IntlTelInput extends Component {
   // set the initial state of the input value and the selected flag
   setInitialState = () => {
     const val = this.props.value || this.props.defaultValue || '';
+    const firstComponentLoad = true;
 
     // if we already have a dial code we can go ahead and set the flag, else fall back to default
     if (this.getDialCode(val)) {
@@ -488,14 +489,14 @@ class IntlTelInput extends Component {
     } else if (this.tempCountry !== 'auto') {
       // see if we should select a flag
       if (this.tempCountry) {
-        this.setFlag(this.tempCountry, true);
+        this.setFlag(this.tempCountry, true, firstComponentLoad);
       } else {
         // no dial code and no tempCountry, so default to first in list
         this.defaultCountry = this.preferredCountries.length
           ? this.preferredCountries[0].iso2
           : this.countries[0].iso2;
         if (!val) {
-          this.setFlag(this.defaultCountry, true);
+          this.setFlag(this.defaultCountry, true, firstComponentLoad);
         }
       }
       // if empty and no nationalMode and no autoHideDialCode then insert the default dial code
