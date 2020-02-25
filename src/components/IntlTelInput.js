@@ -844,15 +844,19 @@ class IntlTelInput extends Component {
 
   bindDocumentClick = () => {
     this.isOpening = true;
-    document
-      .querySelector('html')
-      .addEventListener('click', this.handleDocumentClick);
+    const el = document.querySelector('html');
+
+    el.addEventListener('mousedown', this.handleDocumentClick);
+    el.style.position = 'fixed';
+    el.style.overflow = 'hidden';
   };
 
   unbindDocumentClick = () => {
-    document
-      .querySelector('html')
-      .removeEventListener('click', this.handleDocumentClick);
+    const el = document.querySelector('html');
+
+    el.removeEventListener('mousedown', this.handleDocumentClick);
+    el.style.position = 'static';
+    el.style.overflow = 'auto';
   };
 
   clickSelectedFlag = e => {
